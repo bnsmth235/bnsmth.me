@@ -1,21 +1,28 @@
 import React from "react";
+import { Link } from "react-scroll";
 import Button from "./Button";
 import "../index.css";
 
 const Navbar: React.FC = () => {
   return (
-    <div className="py-5 max-w-screen-lg mx-auto">
-      <nav className="justify-items-center">
-        <div className="w-full rounded-4xl bg-black px-5 py-1.5">
+    <div className="fixed top-0 left-0 w-full py-5 bg-transparent z-50">
+      <nav className="max-w-screen-lg mx-auto justify-items-center">
+        <div className="w-11/12 rounded-4xl bg-black px-5 py-1.5 mx-auto">
           <ul className="flex flex-row justify-between">
             <li className="-ml-3">
-              <Button text="Home" onClick={() => { console.log('Home button clicked'); }} className="px-5 py-1.5" />
+              <Link to="home" smooth={true} duration={500} spy={true} activeClass="active">
+                <Button text="Home" className="px-5 py-1.5" />
+              </Link>
             </li>
             <li>
-              <Button text="About" onClick={() => { console.log('About button clicked'); }} className="px-5 py-1.5" />
+              <Link to="about" smooth={true} duration={500} spy={true} activeClass="active">
+                <Button text="About" className="px-5 py-1.5" />
+              </Link>
             </li>
             <li>
-              <Button text="Service" onClick={() => { console.log('Service button clicked'); }} className="px-5 py-1.5" />
+              <Link to="services" smooth={true} duration={500} spy={true} activeClass="active">
+                <Button text="Service" className="px-5 py-1.5" />
+              </Link>
             </li>
             <li>
               <div className="w-40 flex items-center justify-center">
@@ -23,13 +30,19 @@ const Navbar: React.FC = () => {
               </div>
             </li>
             <li>
-              <Button text="Resume" onClick={() => { console.log('Resume button clicked'); }} className="px-5 py-1.5" />
+              <Link to="resume" smooth={true} duration={500} spy={true} activeClass="active">
+                <Button text="Resume" className="px-5 py-1.5" />
+              </Link>
             </li>
             <li>
-              <Button text="Projects" onClick={() => { console.log('Projects button clicked'); }} className="px-5 py-1.5" />
+              <Link to="projects" smooth={true} duration={500} spy={true} activeClass="active">
+                <Button text="Projects" className="px-5 py-1.5" />
+              </Link>
             </li>
             <li className="-mr-3">
-              <Button text="Contact" onClick={() => { console.log('Contact button clicked'); }} className="px-5 py-1.5" />
+              <Link to="contact" smooth={true} duration={500} spy={true} activeClass="active">
+                <Button text="Contact" className="px-5 py-1.5" />
+              </Link>
             </li>
           </ul>
         </div>
