@@ -3,3 +3,51 @@
 .active button {
   background-color: #98bfdf; /* Change this to your desired active background color */
 }
+
+.urbanist-medium {
+  font-family: "Urbanist", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+.nunito-sans-light {
+  font-family: "Nunito Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+.nunito-sans-normal {
+  font-family: "Nunito Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+.nunito-sans-medium {
+  font-family: "Nunito Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+.nunito-sans-bold {
+  font-family: "Nunito Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 950;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}

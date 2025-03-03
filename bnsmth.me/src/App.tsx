@@ -2,13 +2,25 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import MeWithCircle from "./components/MeWithCircle";
 import "./index.css";
+import Title from "./components/Title";
+import Recommendation from "./components/Recomendation";
+import Experience from "./components/Experience";
+import SecondaryNav from "./components/SecondaryNav";
 
 const App: React.FC = () => {
   return (
     <div className="App">
+      <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet"></link>
+      <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></link>
       <Navbar />
-      <section id="home" className="min-h-screen flex items-center justify-center bg-gray-100">
+      <section id="home" className="min-h-screen flex items-center justify-center bg-white relative">
+        <Recommendation />
+        <Title />
+        <Experience />
         <MeWithCircle altText="Me" />
+        <SecondaryNav/>
       </section>
       <section id="about" className="min-h-screen flex items-center justify-center bg-gray-200">
         <h2>About Section</h2>

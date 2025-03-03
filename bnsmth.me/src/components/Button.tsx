@@ -3,14 +3,19 @@ import "../index.css";
 
 type ButtonProps = {
   text: string;
-  onClick: () => void;
-  className?: string; // Add className prop
+  img?: string;
+  onClick?: () => void;
+  className?: string;
 };
 
-const Button: React.FC<ButtonProps> = ({ text, onClick, className }) => {
+const Button: React.FC<ButtonProps> = ({ text, img, onClick, className }) => {
   return (
-    <button onClick={onClick} className={`text-white hover:bg-gray-700 rounded-4xl ${className}`}>
-      {text}
+    <button
+      onClick={onClick}
+      className={`flex items-center hover:bg-gray-600 rounded-4xl ${className}`}
+    >
+      <span>{text}</span>
+      {img && <img src={img} alt=""  />}
     </button>
   );
 };
