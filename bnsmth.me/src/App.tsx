@@ -6,6 +6,7 @@ import Title from "./components/Title";
 import Recommendation from "./components/Recomendation";
 import Experience from "./components/Experience";
 import SecondaryNav from "./components/SecondaryNav";
+import cardbgimage from "./assets/card-bg.png";
 
 const App: React.FC = () => {
   return (
@@ -22,19 +23,19 @@ const App: React.FC = () => {
         <MeWithCircle altText="Me" />
         <SecondaryNav/>
       </section>
-      <section id="about" className="min-h-screen flex items-center justify-center bg-gray-200">
+      <section id="about" className="card min-h-screen flex items-center justify-center" style={{ backgroundImage: `url(${cardbgimage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <h2>About Section</h2>
       </section>
-      <section id="services" className="min-h-screen flex items-center justify-center bg-gray-300">
+      <section id="services" className="min-h-screen flex items-center justify-center bg-white">
         <h2>Services Section</h2>
       </section>
-      <section id="resume" className="min-h-screen flex items-center justify-center bg-gray-400">
+      <section id="resume" className="card min-h-screen flex items-center justify-center bg-gray-200">
         <h2>Resume Section</h2>
       </section>
-      <section id="projects" className="min-h-screen flex items-center justify-center bg-gray-500">
+      <section id="projects" className="min-h-screen flex items-center justify-center bg-white">
         <h2>Projects Section</h2>
       </section>
-      <section id="contact" className="min-h-screen flex items-center justify-center bg-gray-600">
+      <section id="contact" className="contact-card h-[60vh] flex items-center justify-center bg-black text-white" style={{ backgroundImage: `url(${cardbgimage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <h2>Contact Section</h2>
       </section>
     </div>
