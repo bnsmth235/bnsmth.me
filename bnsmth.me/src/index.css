@@ -1,7 +1,61 @@
 @import "tailwindcss";
 
+@keyframes grow {
+  0%, 100% {
+    transform: scale(1.05);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: scale(1.1);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes shrink-bounce {
+  0% {
+    transform: scale(1.1);
+    animation-timing-function: ease-in-out;
+    background-color: #69aadf;
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.95);
+    background-color: #69aadf;
+    opacity: 0.8;
+  }
+  99% {
+    transform: scale(0.95);
+    background-color: #69aadf;
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.grow-button:hover {
+  animation: grow 0.2s forwards; 
+  background-color: #69aadf;
+  opacity: 1;
+}
+
+.grow-button {
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.grow-button:not(:hover) {
+  animation: shrink-bounce 0.1s forwards;
+}
+
 .active button {
-  background-color: #98bfdf; /* Change this to your desired active background color */
+  background-color: #1f5b8b; /* Change this to your desired active background color */
+}
+
+.urbanist-light {
+  font-family: "Urbanist", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .urbanist-medium {
@@ -11,7 +65,7 @@
   font-style: normal;
 }
 
-.card {
+.card-screen {
   border-radius: 80px;
   position: relative;
   z-index: 1;
