@@ -23,33 +23,33 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full py-5 bg-transparent z-50">
+    <div className="fixed top-0 left-0 w-full py-3 md:py-5 bg-transparent z-50">
       <nav className="max-w-screen-lg mx-auto justify-items-center">
-        <div className="w-full rounded-4xl bg-black px-5 py-1.5 mx-50">
-          <ul className="flex flex-row justify-between">
-            <li className="-ml-3">
+        <div className="w-full rounded-4xl bg-black px-3 md:px-5 py-1.5 mx-50">
+          <ul className="flex flex-col md:flex-row justify-between">
+            <li className="mb-2 md:mb-0 -ml-3">
               <Link to="home" smooth={true} duration={800} spy={true} activeClass="active" onSetActive={handleSetActive}>
-                <Button text="Home" className="px-8 py-2 text-white nunito-sans-bold hover:bg-gray-600 grow-button" />
+                <Button text="Home" className="px-4 md:px-8 py-2 text-white nunito-sans-bold hover:bg-gray-600 grow-button" />
               </Link>
             </li>
-            <li>
+            <li className="mb-2 md:mb-0">
               <Link to="about" smooth={true} duration={800} spy={true} activeClass="active" onSetActive={handleSetActive}>
-                <Button text="About" className="px-8 py-2 text-white nunito-sans-bold hover:bg-gray-600 grow-button" />
+                <Button text="About" className="px-4 md:px-8 py-2 text-white nunito-sans-bold hover:bg-gray-600 grow-button" />
               </Link>
             </li>
-            <li>
+            <li className="mb-2 md:mb-0">
               <Link to="services" smooth={true} duration={800} spy={true} activeClass="active" onSetActive={handleSetActive}>
-                <Button text="Services" className="px-8 py-2 text-white nunito-sans-bold hover:bg-gray-600 grow-button" />
+                <Button text="Services" className="px-4 md:px-8 py-2 text-white nunito-sans-bold hover:bg-gray-600 grow-button" />
               </Link>
             </li>
-            <li>
+            <li className="mb-2 md:mb-0">
               <Link to="resume" smooth={true} duration={800} spy={true} activeClass="active" onSetActive={handleSetActive}>
-                <Button text="Resume" className="px-8 py-2 text-white nunito-sans-bold hover:bg-gray-600 grow-button" />
+                <Button text="Resume" className="px-4 md:px-8 py-2 text-white nunito-sans-bold hover:bg-gray-600 grow-button" />
               </Link>
             </li>
-            <li>
+            <li className="mb-2 md:mb-0">
               <Link to="projects" smooth={true} duration={800} spy={true} activeClass="active" id="projects-link">
-                <Button text="Projects" className="px-8 py-2 text-white nunito-sans-bold hover:bg-gray-600 grow-button" />
+                <Button text="Projects" className="px-4 md:px-8 py-2 text-white nunito-sans-bold hover:bg-gray-600 grow-button" />
               </Link>
             </li>
             <li className="-mr-3">
@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
                 onSetActive={handleSetActive}
                 onSetInactive={handleSetInactive}
               >
-                <Button text="Contact" className="px-8 py-2 text-white nunito-sans-bold hover:bg-gray-600 grow-button" />
+                <Button text="Contact" className="px-4 md:px-8 py-2 text-white nunito-sans-bold hover:bg-gray-600 grow-button" />
               </Link>
             </li>
           </ul>

@@ -114,3 +114,12 @@
     "wdth" 100,
     "YTLC" 500;
 }
+
+.icon-white {
+  filter: invert(100%);
+}
+
+.small-icon {
+  width: 24px;
+  height: 24px;
+}

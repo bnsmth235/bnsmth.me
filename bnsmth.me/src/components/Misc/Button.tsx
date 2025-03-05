@@ -12,9 +12,9 @@ const Button: React.FC<ButtonProps> = ({ text, img, onClick, className }) => {
   return (
     <button
       onClick={onClick}
-      className={`flex items-center rounded-4xl ${className}`}>
+      className={`flex items-center justify-center rounded-4xl ${className}`}>
       <span>{text}</span>
-      {img && <img src={img} alt=""  />}
+      {img && <img src={img} alt="" className="ml-2" />}
     </button>
   );
 };
