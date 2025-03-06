@@ -1,7 +1,7 @@
 import React from "react";
 import "../../index.css"; // Import the global CSS file
 import "./About.css"; // Import the CSS file for About page
-import Card from "../Card/Card"; // Import the reusable Card component
+import Card from "../Misc/Card"; // Import the reusable Card component
 import workcard from "../../assets/work-card.png"; // Import the image for the work card
 import musiccard from "../../assets/music-card.png"; // Import the image for the music card
 import outdoorscard from "../../assets/outdoors-card.png"; // Import the image for the outdoors card
@@ -9,9 +9,9 @@ import outdoorscard from "../../assets/outdoors-card.png"; // Import the image f
 const About: React.FC = () => {
   return (
     <div className="about-section p-4 md:p-8 text-white w-full h-full flex items-center justify-center">
-      <div className="content-container text-center">
-        <div className="w-full md:w-3/4 mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 urbanist-medium">About Me</h2>
+      <div className="content-container text-center max-w-screen-xl mx-auto">
+        <div className="w-full mx-auto">
+          <h2 className="text-3xl md:text-6xl font-bold mb-4 urbanist-bold">About <span className="text-[#69aadf]">Me</span></h2>
           <p className="text-base md:text-lg mb-4 urbanist-light">
             I'm a Software Engineer with experience in C#, Python, Django, and Java, specializing in web development, GUIs, OS and concurrency, and machine learning. I’ve led impactful projects, including developing a machine learning service for Conservice to automate data collection and improve efficiency.
             <br/><br/>

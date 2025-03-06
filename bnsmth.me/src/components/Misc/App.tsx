@@ -7,6 +7,7 @@ import Resume from "../Resume/Resume";
 import Services from "../Services/Services";
 import Contact from "../Contact/Contact"; // Import Contact component
 import cardbgimage from "../../assets/card-bg.png";
+import Projects from "../Projects/Projects";
 
 const App: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ const App: React.FC = () => {
       <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></link>
       <Navbar />
       <Home />
-      <section id="about" className="card-screen min-h-screen min-w-screen flex items-center justify-center p-4" style={{ backgroundImage: `url(${cardbgimage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section id="about" className="card-screen min-h-screen flex items-center justify-center p-4" style={{ backgroundImage: `url(${cardbgimage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <About /> {/* Use the About component */}
       </section>
       <section id="services" className="min-h-screen flex items-center justify-center bg-white p-4">
@@ -27,7 +28,7 @@ const App: React.FC = () => {
         <Resume />
       </section>
       <section id="projects" className="min-h-screen flex items-center justify-center bg-white p-4">
-        <h2>Projects Section</h2>
+        <Projects/>
       </section>
       <section id="contact" className="contact-card h-[60vh] flex items-center justify-center bg-black text-white p-4" style={{ backgroundImage: `url(${cardbgimage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <Contact /> {/* Use the Contact component */}
