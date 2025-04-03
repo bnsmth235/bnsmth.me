@@ -8,7 +8,7 @@ type MeWithCircleProps = {
 
 const MeWithCircle: React.FC<MeWithCircleProps> = ({ altText }) => {
   return (
-    <div className="absolute bottom-0 w-7/16 h-auto z-10">
+    <div className="w-7/16 h-auto z-10">
       <img src={meImage} alt={altText} className="w-full h-full object-cover" />
     </div>
   );

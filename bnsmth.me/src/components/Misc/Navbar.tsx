@@ -38,11 +38,6 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
             <li className="mb-2 md:mb-0">
-              <Link to="services" smooth={true} duration={800} spy={true} activeClass="active" onSetActive={handleSetActive}>
-                <Button text="Services" className="px-4 md:px-8 py-2 text-white nunito-sans-bold hover:bg-gray-600 grow-button" />
-              </Link>
-            </li>
-            <li className="mb-2 md:mb-0">
               <Link to="resume" smooth={true} duration={800} spy={true} activeClass="active" onSetActive={handleSetActive}>
                 <Button text="Resume" className="px-4 md:px-8 py-2 text-white nunito-sans-bold hover:bg-gray-600 grow-button" />
               </Link>

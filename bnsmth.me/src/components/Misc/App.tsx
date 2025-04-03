@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import Home from "../Home/Home";
 import "../../index.css";
@@ -10,6 +10,29 @@ import cardbgimage from "../../assets/card-bg.png";
 import Projects from "../Projects/Projects";
 
 const App: React.FC = () => {
+  const [isScreenWideEnough, setIsScreenWideEnough] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsScreenWideEnough(window.innerWidth >= 925);
+    };
+
+    handleResize(); // Check on initial load
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  if (!isScreenWideEnough) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gray-100 text-center p-4">
+        <p className="text-lg md:text-xl font-bold">
+          Your screen isn't wide enough to view this site properly. Please use a device with a larger screen.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="App">
       <link rel="preconnect" href="https://fonts.googleapis.com"></link>
