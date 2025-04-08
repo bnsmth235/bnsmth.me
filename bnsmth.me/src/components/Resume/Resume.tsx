@@ -6,8 +6,18 @@ const Resume: React.FC = () => {
 
   return (
     <div className="w-9/10 p-4 md:p-8 text-black">
-      <h2 className="text-4xl md:text-6xl font-bold mb5">My <span className="text-[#69aadf]">Work Experience</span></h2>
+      <div className="flex flex-col items-center justify-center mb-10">
+        <h2 className="text-4xl md:text-6xl font-bold mb-5 w-full whitespace-nowrap">
+          My <span className="text-[#69aadf]">Work Experience</span>
+        </h2>
+      </div>
       <div className="about-section p-4 md:p-8 text-white flex flex-col md:flex-row items-center justify-center">
+        <div className="h-full md:w-1/8 text-center">
+          <a href={resume} target="_blank" rel="noopener noreferrer" className="text-[#023358]">
+            <img src={resumeThumbnail} className="w-1/2 md:w-full"></img>
+            <span className="urbanist-bold text-sm md:text-1">View My <span className="text-[#69aadf]">Resume!</span></span>
+          </a>
+        </div>
         <ul className="flex flex-col w-full md:w-2/5 justify-evenly h-full -mt-15">
           <li className="flex flex-col text-right">
             <h2 className="nunito-sans-medium text-xl md:text-3xl text-[#023358]">Northline Construction - Provo, UT</h2>
@@ -39,12 +49,6 @@ const Resume: React.FC = () => {
             <h4 className="nunito-sans-normal text-sm md:text-base text-[#023358]">Led microservices development to enhance efficiency and automation, building a machine learning service to predict bill availability, reducing server costs, and maintaining 1,500+ scrapers to automate utility bill retrieval.</h4>
           </li>
         </ul>
-      </div>
-      <div className="block -mt-40 md:-mt-80 w-full md:w-1/8 flex flex-col text-center">
-        <a href={resume} target="_blank" rel="noopener noreferrer" className="text-[#023358]">
-          <img src={resumeThumbnail} className="w-1/2 md:w-full"></img>
-          <span className="urbanist-bold text-sm md:text-1">View My <span className="text-[#69aadf]">Resume!</span></span>
-        </a>
       </div>
     </div>
   );
