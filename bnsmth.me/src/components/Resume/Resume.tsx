@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from "react";
 import resume from "../../assets/resume.pdf";
 import resumeThumbnail from "../../assets/resume-thumbnail.png";
 
