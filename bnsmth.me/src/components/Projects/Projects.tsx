@@ -59,20 +59,20 @@ const Projects: React.FC = () => {
         <div className={`marquee flex ${isScrolling ? "paused" : ""}`} style={{ width: `${projects.length * 100}%` }}>
           {projects.concat(projects).map((project, index) => (
             <div key={index} className="project-card p-6 border border-gray-300 rounded-lg relative mx-2">
-              <div className="project-image-container">
-                <img src={project.thumbnail} alt={`${project.title} Thumbnail`} className="project-image rounded-lg" />
-              </div>
-              <div className="project-info absolute bottom-0 left-0 right-0 p-4 text-white grid grid-cols-2" style={{ background: "rgba(0, 0, 0, 0.5)" }}>
-                <div className="">
-                  <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-base mb-4 italic">{project.description}</p>
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+                <div className="project-image-container">
+                  <img src={project.thumbnail} alt={`${project.title} Thumbnail`} className="project-image rounded-lg" />
                 </div>
-                <div className="project-link-container flex justify-end items-center">  
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
-                    <img src={rightIcon} alt="View Project" className="w-18 h-18" style={{ filter: "invert(100%)" }} />
-                  </a>
+                <div className="project-info absolute bottom-0 left-0 right-0 p-4 text-white grid grid-cols-2" style={{ background: "rgba(0, 0, 0, 0.5)" }}>
+                  <div className="">
+                    <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
+                    <p className="text-base mb-4 italic">{project.description}</p>
+                  </div>
+                  <div className="project-link-container flex justify-end items-center">  
+                      <img src={rightIcon} alt="View Project" className="w-18 h-18" style={{ filter: "invert(100%)" }} />
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           ))}
         </div>

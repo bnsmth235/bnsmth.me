@@ -44,11 +44,13 @@ const Contact: React.FC = () => {
                 Home
               </Link>
             </li>
+              <a>
             <li className="mt-2">
               <Link to="about" smooth={true} duration={800}>
                 About Us
               </Link>
             </li>
+              </a>
             <li className="mt-2">
               <Link to="services" smooth={true} duration={800}>
                 Service
