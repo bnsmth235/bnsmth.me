@@ -5,7 +5,7 @@ import Bubble from "./Bubble";
 
 const jobs = [
   {
-    title: "Software Engineer",
+    title: "Senior Software Engineer",
     company: "Brigham Young University",
     date: "Aug 2025 - Current",
     description: "Developing and maintaining web applications and services that provide students with access to library resources."
