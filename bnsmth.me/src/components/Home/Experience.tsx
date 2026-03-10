@@ -7,7 +7,7 @@ const Experience: React.FC = () => {
     <div className="p-5 max-w-xs">
       <img src={stars} alt="5 stars" className="w-auto h-8 object-cover mb-4" />
       <p className="text-sm md:text-base lg:text-lg italic" style={{ lineHeight: 1.8 }}>
-        <span className="text-2xl md:text-3xl lg:text-5xl font-bold">3 years</span>
+        <span className="text-2xl md:text-3xl lg:text-5xl font-bold">4 years</span>
         <br />
         <span className="whitespace-nowrap">professional and personal experience</span>
       </p>

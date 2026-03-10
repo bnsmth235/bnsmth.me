@@ -40,24 +40,22 @@ const Contact: React.FC = () => {
           <h2 className="nunito-sans-medium text-[#69aadf]">Navigation</h2>
           <ul className="flex flex-col">
             <li className="mt-2">
-              <Link to="home" smooth={true} duration={800}>
+              <Link to="home" smooth={true} duration={800} className="cursor-pointer">
                 Home
               </Link>
             </li>
-              <a>
             <li className="mt-2">
-              <Link to="about" smooth={true} duration={800}>
+              <Link to="about" smooth={true} duration={800} className="cursor-pointer">
                 About
               </Link>
             </li>
-              </a>
             <li className="mt-2">
-              <Link to="resume" smooth={true} duration={800}>
+              <Link to="resume" smooth={true} duration={800} className="cursor-pointer">
                 Resume
               </Link>
             </li>
             <li className="mt-2">
-              <Link to="projects" smooth={true} duration={800}>
+              <Link to="projects" smooth={true} duration={800} className="cursor-pointer">
                 Project
               </Link>
             </li>

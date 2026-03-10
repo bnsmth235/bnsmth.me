@@ -43,7 +43,7 @@ const Resume: React.FC = () => {
       </div>
       <div className="about-section p-4 h-full md:p-8 text-white flex flex-col md:flex-row items-center justify-center">
         {/* Resume link/thumbnail column */}
-        <div className="h-full md:w-1/8 text-center flex flex-col items-center justify-center">
+        <div className="h-full md:w-1/8 mr-8 text-center flex flex-col items-center justify-center">
           <a href={resume} target="_blank" rel="noopener noreferrer" className="text-[#023358]">
             <img src={resumeThumbnail} className="w-1/2 md:w-full" alt="Resume Thumbnail" />
             <span className="urbanist-bold text-sm md:text-1">View My <span className="text-[#69aadf]">Resume!</span></span>
