@@ -1,68 +1,65 @@
-.carousel-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.carousel {
+.projects-gallery {
   display: flex;
-  width: 100%;
-  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.marquee-container {
-  position: relative;
+.projects-slider-window {
   overflow: hidden;
-  width: 80%;
-  margin: 0 auto;
 }
 
-.marquee {
+.projects-slider-track {
   display: flex;
-  animation: marquee 30s linear infinite;
+  transition: transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
 }
 
-.marquee.paused {
-  animation-play-state: paused;
+.projects-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
 }
 
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-.marquee-gradient-left,
-.marquee-gradient-right {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 10%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.marquee-gradient-left {
-  left: 0;
-  background: linear-gradient(to right, white, transparent);
-}
-
-.marquee-gradient-right {
-  right: 0;
-  background: linear-gradient(to left, white, transparent);
+@media (min-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .project-card {
-  width: calc(33.33% - 1rem); /* Larger cards to show only 2 and part of 1 */
-  transition: transform 0.3s ease-in-out;
-  margin: 2rem 2rem; /* Add margin to space the cards */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border-radius: 0.75rem;
+  background: white;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
 }
 
 .project-card:hover {
-  transform: scale(1.1);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.14);
+}
+
+.project-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-card-custom .project-link {
+  position: relative;
 }
 
 .project-image-container {
@@ -84,18 +81,21 @@
 }
 
 .project-info {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+.project-info-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1rem;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 75%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.08) 85%);
   color: white;
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  max-height: 35%;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
 }
 
 .project-link-container {
@@ -104,52 +104,124 @@
   align-items: center;
 }
 
-.project-link {
-  display: block;
+.project-arrow {
+  width: 3rem;
+  height: 3rem;
 }
 
-.carousel-control {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  font-size: 2rem;
-  padding: 0.5rem;
-  cursor: pointer;
-  z-index: 1;
-  border-radius: 50%;
-  transition: background 0.3s;
+.project-card-github .project-arrow {
+  filter: invert(17%) sepia(12%) saturate(824%) hue-rotate(177deg) brightness(95%) contrast(92%);
 }
 
-.carousel-control:hover {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.carousel-control.left-0 {
-  left: -2rem;
-}
-
-.carousel-control.right-0 {
-  right: -2rem;
-}
-
-.carousel-indicators {
+.projects-pagination-controls {
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.indicator {
-  width: 1rem;
-  height: 1rem;
-  background: gray;
-  border-radius: 50%;
-  margin: 0 0.5rem;
+.projects-page-button {
+  color: #0f172a;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.22s ease-in-out, opacity 0.22s ease-in-out, transform 0.22s ease-in-out;
 }
 
-.indicator.active {
-  background: black;
+.projects-page-button:hover:not(:disabled) {
+  color: black;
+  transform: scale(1.06);
+}
+
+.projects-page-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.projects-pagination-dots {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.2rem 0;
+}
+
+.projects-pagination-indicator {
+  position: absolute;
+  left: 0;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: #69aadf;
+  border-radius: 9999px;
+  transform: translateY(-50%);
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), background-color 220ms ease-in-out;
+  pointer-events: none;
+}
+
+.projects-pagination-dot {
+  position: relative;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: transparent;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.22s ease-in-out;
+}
+
+.projects-pagination-dot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #cbd5e1;
+  transition: background-color 0.22s ease-in-out, transform 0.22s ease-in-out;
+}
+
+.projects-pagination-dot:hover::before {
+  background: #94a3b8;
+  transform: scale(1.08);
+}
+
+.projects-pagination-dot.active::before {
+  background: transparent;
+}
+
+.projects-nav-arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: invert(17%) sepia(12%) saturate(824%) hue-rotate(177deg) brightness(95%) contrast(92%);
+  transition: filter 0.22s ease-in-out, transform 0.22s ease-in-out;
+}
+
+.projects-page-button:hover:not(:disabled) .projects-nav-arrow {
+  filter: invert(100%);
+}
+
+.projects-nav-arrow-left {
+  transform: rotate(180deg);
+}
+
+.projects-page-button:hover:not(:disabled) .projects-nav-arrow-left {
+  transform: rotate(180deg) translateX(0.12rem);
+}
+
+.projects-page-button:hover:not(:disabled) .projects-nav-arrow:not(.projects-nav-arrow-left) {
+  transform: translateX(0.12rem);
+}
+
+@media (max-width: 767px) {
+  .project-info {
+    grid-template-columns: 1fr;
+  }
+
+  .project-link-container {
+    justify-content: flex-start;
+  }
 }
