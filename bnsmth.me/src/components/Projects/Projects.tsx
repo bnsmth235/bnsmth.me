@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import rightIcon from "../../assets/right.png";
 import githubThumbnail from "../../assets/github-thumbnail.png";
-import moffatIntelThumbnail from "../../assets/moffatintel-thumbnail.jpg";
+import contracktThumbnail from "../../assets/contrackt-thumbnail.png";
 import "./Projects.css"; 
 
 const GITHUB_USERNAME = "bnsmth235";
@@ -40,11 +40,11 @@ type Project = {
 
 const customProjects: Project[] = [
   {
-    id: "moffatintel",
-    title: "MoffatIntel",
+    id: "contrackt",
+    title: "Contrackt",
     description: "End-to-end solution for managing construction projects. Ask me for a demo!",
     link: "https://www.moffatintel.com/",
-    thumbnail: moffatIntelThumbnail,
+    thumbnail: contracktThumbnail,
     source: "custom",
     order: 1,
   },
