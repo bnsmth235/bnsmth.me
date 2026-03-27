@@ -7,7 +7,7 @@ import SecondaryNav from "./SecondaryNav";
 
 const Home: React.FC = () => {
   return (
-    <section id="home" className="min-h-screen flex flex-col items-center justify-center bg-white relative p-4 md:p-8">
+    <section id="home" className="w-full max-w-[2750px] mx-auto min-h-screen flex flex-col items-center justify-center bg-white relative p-4 md:p-8">
       <Title />
       <div className="absolute bottom-0 flex flex-row items-center justify-center w-full h-fit">
         <Recommendation />
