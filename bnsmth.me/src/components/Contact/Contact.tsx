@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-between ml-20 w-9/10 md:w-3/4">
         <div className="w-6/10">
           <div className="short-paragraph mt-4 text-left">
-            <p>Thank you for visiting my website. I am passionate about connecting with like-minded professionals and exploring new opportunities. Feel free to reach out through any of the social media platforms listed below. Let's build something great together!</p>
+            <p>Thank you for visiting my website! I am passionate about connecting with like-minded professionals and exploring new opportunities. Feel free to reach out through any of the social media platforms listed below. Let's build something great together!</p>
           </div>
           <div className="social-media-links flex flex-row justify-left mt-23">
             <a href="https://www.facebook.com/profile.php?id=100006564123677" target="_blank" rel="noopener noreferrer">
